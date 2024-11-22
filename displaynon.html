@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            display: flex;
+        }
+        .login,.register{
+            height: 100%;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="login" style="background-color: aqua;">
+            <button id="loginbtn">go to register</button>
+            <h1>Login</h1></div>
+           
+        <div class="register" style="background-color: blueviolet; display: none;">
+            <button id="resbtn">goto login</button>
+            <h1>Register</h1></div>
+            
+    </div>
+    <script>
+        let resbtn=document.getElementById("resbtn")
+        let loginbtn=document.getElementById("loginbtn")
+        let login=document.querySelector(".login")
+        let register=document.querySelector(".register")
+        
+
+
+        resbtn.addEventListener("click",()=>{
+            login.style.display="block"
+            register.style.display="none"
+        })
+       loginbtn.addEventListener("click",()=>{
+            login.style.display="none"
+            register.style.display="block"
+        })
+
+
+    </script>
+</body>
+</html>
